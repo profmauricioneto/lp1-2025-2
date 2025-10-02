@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercicio 04 - Alarme!</title>
+</head>
+<body>
+    <h2>Meu Alarme com JavaScript!</h2>
+
+    <div class="entrada-dados">
+        <label for="horas">Hora</label>
+        <input type="number" name="horas" id="horas" max="24" min="0" required/>
+    </div>
+    <div class="entrada-dados">
+        <label for="minutos">Minutos</label>
+        <input type="number" name="minutos" id="minutos" max="60" min="0" required/>
+    </div>
+
+    <div class="entrada-dados">
+        <label for="mensagem">Mensagem</label>
+        <textarea name="mensagem" id="mensagem" cols="5" rows="5" required></textarea>
+    </div>
+    <div id="btn-div">
+        <button id="ativar" onclick="alarme">Ativar</button>
+    </div>
+    
+    <div id="aviso"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

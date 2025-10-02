@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+.entrada-dados {
+    text-align: center;
+    padding: 10px;
+}
+
+.entrada-dados label {
+    display: block;
+}
+
+.entrada-dados input, textarea {
+    width: 35%;
+    padding: 10px;
+}
+
+#btn-div {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(10, 10, 230);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #043bee41;
+}

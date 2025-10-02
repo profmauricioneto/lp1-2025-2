@@ -27,4 +27,20 @@ console.log(typeof nota);
 nota = parseInt(nota);
 console.log(typeof nota);
 
+let notaFinal = 8.1234567;
+console.log(notaFinal.toFixed(2));
 
+let nomeCompleto = new String("Mauricio Neto");
+console.log(nomeCompleto);
+
+let nomeCompleto2 = "Mauricio Neto"
+console.log(nomeCompleto2);
+
+let message = `Olá, Sr. ${nomeCompleto2}.
+Este é uma possibilidade de 
+uso da template string.
+`;
+console.log(message);
+
+let carro = 'chevrolet';
+console.log(carro.lastIndexOf('e'));
