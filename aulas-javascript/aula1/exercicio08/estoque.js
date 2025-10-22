@@ -1,12 +1,24 @@
 // Crie um objeto chamado estoque que armazene informações sobre produtos disponíveis em uma loja Cada produto deve ter as propriedades nome, preço e quantidade. Em seguida, crie uma função chamada verificarEstoque que recebe o nome de um produto como parâmetro e retorna uma mensagem informando se o produto está disponível em estoque e quantas unidades estão disponíveis.
-const prompt = require('prompt-sync')();
+// const prompt = require('prompt-sync')();
 
 let estoque = [
-    {nome: 'sapato', preco: 200, quantidade: 5 },
-    {nome: 'camisa', preco: 100, quantidade: 16 },
-    {nome: 'calça', preco: 250, quantidade: 10 },
-    {nome: 'meia', preco: 15, quantidade: 32 }    
+    {nome: 'sapato', preco: 200, quantidade: 5, categoria: 'calcados'},
+    {nome: 'camisa', preco: 100, quantidade: 16, categoria: 'vestuario'},
+    {nome: 'calça', preco: 250, quantidade: 10, categoria: 'vestuario'},
+    {nome: 'meia', preco: 15, quantidade: 32, categoria: 'calcados'}    
 ]
+
+// Criar uma função que: filtre os elementos do estoque com base na categoria passada como argumento.
+function calcularTotalPorCategoria(categoria) {
+    const produtosFiltrados = estoque.filter(function(produto){
+        return produto.categoria === categoria.toLowerCase();
+    });
+    return produtosFiltrados;
+}
+
+let retorno = calcularTotalPorCategoria('vestuario');
+console.log(retorno);
+
 
 function verificarEstoque(nomeProduto) {
     let flag = false;
@@ -14,7 +26,6 @@ function verificarEstoque(nomeProduto) {
         if (estoque[i].nome === nomeProduto) {
             console.log(`Produto: ${nomeProduto} está no estoque.`);
             console.log(`Quantidade em estoque: ${estoque[i].quantidade}.`);
-            // TODO: COLOCAR FUNCAO DE CALCULO AQUI!
             let valorTotal = calcularTotalEmEstoque(estoque[i]);
             console.log(`Valor Total em Estoque: ${valorTotal}`);
             flag = true;
@@ -47,7 +58,7 @@ function adicionarProduto(nome, preco, quantidade) {
 //     console.error(`Produto não encontrado no estoque!`);
 // }
 
-let nome = prompt('Nome do Produto: ');
-let preco = parseFloat(prompt('Preco do Produto: '));
-let quantidade = parseInt(prompt('Quantidade do Produto: '));
-adicionarProduto(nome, preco, quantidade);
+// let nome = prompt('Nome do Produto: ');
+// let preco = parseFloat(prompt('Preco do Produto: '));
+// let quantidade = parseInt(prompt('Quantidade do Produto: '));
+// adicionarProduto(nome, preco, quantidade);
