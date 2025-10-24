@@ -13,11 +13,19 @@ function calcularTotalPorCategoria(categoria) {
     const produtosFiltrados = estoque.filter(function(produto){
         return produto.categoria === categoria.toLowerCase();
     });
-    return produtosFiltrados;
+    // TODO: CALCULAR O TOTAL DE VALOR POR CATEGORIA
+    let somatorio = 0;
+    produtosFiltrados.forEach(function (produto) {
+        somatorio += (produto.quantidade * produto.preco)
+    })
+    // for (let i = 0; i < produtosFiltrados.length; i++) {
+    //     somatorio += (produtosFiltrados[i].quantidade * produtosFiltrados[i].preco);
+    // }
+    return somatorio;
 }
 
-let retorno = calcularTotalPorCategoria('vestuario');
-console.log(retorno);
+let retorno = calcularTotalPorCategoria('calcados');
+console.log("Total: " + retorno);
 
 
 function verificarEstoque(nomeProduto) {
