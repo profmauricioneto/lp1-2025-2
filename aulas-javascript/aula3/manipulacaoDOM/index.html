@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Aula de DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 id="main-title">Lista de Tarefas Interativa</h1>
+        <p>Um projeto para aprender Manipulação do DOM</p>
+    </header>
+
+    <main>
+        <section class="card" id="form-section">
+            <h2>Adicionar Nova Tarefa</h2>
+            <form id="task-form">
+                <label for="task-input">Tarefa:</label>
+                <input type="text" id="task-input" placeholder="O que precisa ser feito?">
+                <button type="submit" id="add-task-btn">Adicionar</button>
+            </form>
+        </section>
+
+        <section class="card" id="list-section">
+            <h2>Minhas Tarefas</h2>
+            <ul id="task-list">
+                <li class="task-item">Estudar HTML</li>
+                <li class="task-item completed">Estudar CSS</li>
+                <li class="task-item">Praticar JavaScript</li>
+            </ul>
+        </section>
+
+        <section class="card" id="controls">
+            <h2>Controles</h2>
+            <button id="toggle-theme-btn">Mudar Tema (Claro/Escuro)</button>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+[
+  {
+    "titulo": "estudar javascript",
+    "descricao": "estudar o básico de JS",
+    "concluido": false
+  },
+  {
+    "titulo": "estudar HTML",
+    "descricao": "estudar o básico de HTML",
+    "concluido": true
+  },
+  {
+    "titulo": "estudar Java",
+    "descricao": "estudar o básico de Java",
+    "concluido": true
+  },
+  {
+    "titulo": "estudar react",
+    "descricao": "estudar o básico de react",
+    "concluido": false
+  },
+  {
+    "titulo": "estudar PHP",
+    "descricao": "estudar o básico de PHP",
+    "concluido": false
+  },
+  {
+    "titulo": "estudar C",
+    "descricao": "estudar o básico de C",
+    "concluido": true
+  }
+]
