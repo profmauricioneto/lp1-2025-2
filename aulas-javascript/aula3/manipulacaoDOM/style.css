@@ -1,3 +1,6 @@
+@import url('./css/header.css');
+@import url('./css/main.css');
+
 :root {
     --bg-color: #f4f7f6;
     --card-bg-color: #ffffff;
@@ -32,45 +35,9 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-main {
-    max-width: 700px;
-    margin: 20px auto;
-    display: grid;
-    gap: 20px;
-}
-
-header {
-    text-align: center;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 10px;
-}
-
 h1, h2 {
     color: var(--primary-color);
     margin-bottom: 10px;
-}
-
-.card {
-    background-color: var(--card-bg-color);
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: var(--shadow);
-    transition: background-color 0.3s;
-}
-
-#task-form {
-    display: flex;
-    gap: 10px;
-}
-
-#task-input {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid var(--gray-color);
-    border-radius: 5px;
-    font-size: 1rem;
-    background-color: var(--bg-color);
-    color: var(--text-color);
 }
 
 button {
@@ -89,33 +56,7 @@ button:hover {
     background-color: var(--primary-hover);
 }
 
-#task-list {
-    list-style-type: none; 
-}
 
-.task-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px;
-    border-bottom: 1px solid var(--gray-color);
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.task-item:last-child {
-    border-bottom: none;
-}
-
-.task-item:hover {
-    background-color: rgba(0, 0, 0, 0.03);
-}
-
-.task-item.completed {
-    text-decoration: line-through;
-    color: var(--success-color);
-    opacity: 0.7;
-}
 
 .delete-btn {
     background-color: var(--danger-color);
