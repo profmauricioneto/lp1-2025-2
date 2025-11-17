@@ -25,3 +25,20 @@ for(let i = 0; i < items.length; i++) {
         }
     });
 }
+
+// capturar entrada de dados
+let botaoSubmit = document.querySelector('[type=submit]');
+console.log(botaoSubmit);
+botaoSubmit.addEventListener('click', (event) => {
+    event.preventDefault();
+    let inputText = document.querySelector('#task-input').value;
+    console.log(inputText);
+
+    let item = document.createElement('li');
+    item.classList.add('task-item');
+    item.textContent = inputText;
+
+    console.log(item);
+    
+    document.querySelector('#task-input').value = "";
+})
