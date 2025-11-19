@@ -56,3 +56,10 @@ main {
     color: var(--success-color);
     opacity: 0.7;
 }
+
+.task-item.completed button {
+    background-color: var(--danger-color);
+    text-decoration: none;
+    color: white;
+    opacity: 1;
+}
