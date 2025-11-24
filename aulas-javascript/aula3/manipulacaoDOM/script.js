@@ -22,12 +22,16 @@ botaoSubmit.addEventListener('click', (event) => {
     // criar um elemento li e manipula-lo
     let item = document.createElement('li');
     item.classList.add('task-item');
-    item.textContent = inputText;
+
+    let paragraph = document.createElement('p');
+    paragraph.textContent = inputText;
+
     let botao = document.createElement('button');
     botao.textContent = 'completar';
 
     // adicionar a funcao de toggle ao botao
-    botao.onclick = () => toggleCompleted(item);
+    botao.onclick = () => toggleCompleted(paragraph);
+    item.appendChild(paragraph);
     item.appendChild(botao);
 
     // pegar a referencia da lista e adicionar o item criado.
@@ -54,10 +58,10 @@ botaoSubmit.addEventListener('click', (event) => {
 // }
 
 function toggleCompleted(item) {
-    if (item.classList.contains('completed')) {
-        item.classList.remove('completed');
-    } else {
-        item.classList.add('completed');
-    }
-
+    // if (item.classList.contains('completed')) {
+    //     item.classList.remove('completed');
+    // } else {
+    //     item.classList.add('completed');
+    // }
+    item.classList.toggle("completed");
 }
