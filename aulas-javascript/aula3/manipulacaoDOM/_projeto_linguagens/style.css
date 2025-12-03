@@ -57,3 +57,34 @@ input, select {
 .btn-enviar:hover {
     background-color: var(--color-bg-hover);
 }
+
+table {
+    border: 1px solid blue;
+    border-radius: 5px;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color:#eee;
+}
+
+tr th {
+    background-color: var(--color-bg-hover);
+    color: #ffffff;
+    width: 100%;
+}
+
+tr:hover {
+    background-color: lightgray;
+}
+
+thead, tbody {
+    width: 100%;
+    border-radius: 5px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px 5em;
+}
+
