@@ -1,9 +1,19 @@
-const { ipcRenderer } = require('electron')
+// const { ipcRenderer } = require('electron');
 
-document.querySelector('#btn-enviar').addEventListener('click', () => {
-    ipcRenderer.send('canal-teste', 'Mensagem enviada da renderer para a Main!');
-})
+console.log('versao do node: ' + window.myAPI.node());
+console.log('versao do chromium: ' + window.myAPI.chromium());
+console.log('versao do electron: ' + window.myAPI.electron());
 
-ipcRenderer.on('canal-resposta', (event, message) => {
-    alert(`resposta da main: ${message}`);
-})
+document.querySelector('#btn-enviar').addEventListener('click', async () => {
+    const response = await ipcRenderer.invoke('canal-teste', { key: 'enviando para main!'});
+    alert(response);
+});
+
+
+
+
+// ipcRenderer.on('canal-resposta', (event, message) => {
+//     alert(`resposta da main: ${message}`);
+// })
+
+

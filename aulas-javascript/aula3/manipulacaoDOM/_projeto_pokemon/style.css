@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-text-primary: #484848;
+    --bg-color: #f0f0f0;
+    --bg-color-button: #038bbb;
+}
+
+header {
+    text-align: center;
+    font-size: larger;
+    margin: 3em 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+input, textarea, button[type=submit] {
+    padding: 1.1em;
+    margin: 0 20em;
+    border: 1px solid var(--color-text-primary);
+    border-radius: 5px;
+}
+
+button[type=submit] {
+    margin: 0 20em;
+    background-color: var(--bg-color-button);
+    color: white;
+    font-size: medium;
+}
+
+button[type=submit]:hover {
+    background-color: #038b;   
+}
+
+#cartas {
+    display: flex;
+    gap: 0.5em
+}
+
+.carta {
+    border: 2px solid var(--color-text-primary);
+    border-radius: 5px;
+    margin: 1em;
+    padding: 1em 2em;
+    text-align: center;
+    background-color: var(--bg-color);
+}
+
+.carta img {
+    width: 200px;
+    height: auto;
+}
+
+.carta h3 {
+    padding: 0.5em 0;
+}
+
+.descricao {
+    padding: 1em 0;
+}
