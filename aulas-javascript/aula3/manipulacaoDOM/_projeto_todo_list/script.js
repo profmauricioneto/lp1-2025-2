@@ -6,11 +6,12 @@
 // Açao de mudar o tema - toggle.
 function mudarTema() {
     let body = document.getElementsByTagName('body')[0];
-    if (body.classList.contains('dark-mode')) {
-        body.classList.remove('dark-mode')
-    } else {
-        body.classList.add('dark-mode');
-    }
+    body.classList.toggle('dark-mode');
+    // if (body.classList.contains('dark-mode')) {
+    //     body.classList.remove('dark-mode')
+    // } else {
+    //     body.classList.add('dark-mode');
+    // }
 } 
 
 // capturar entrada de dados
